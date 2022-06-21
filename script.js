@@ -36,13 +36,28 @@ const properties = Object.keys(restaurant.openingHours);
 console.log(properties)
 // gives you an array with keys
 
-// check length in object and keep adding the day
+// check length in object and keep adding the day by looping keys
 let openStr = `We are open on ${properties.length} days: `;
 for (const day of properties) {
   openStr += `${day}, `
 }
 console.log(openStr);
 
+// Property values
+const values = Object.values(restaurant.openingHours);
 
+// ENTRIES is keys + values together
+let entries = Object.entries(restaurant.openingHours);
+console.log(entries)
+//gives you an array
 
+// when it is not destructured
+// for(const x of entries) {
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
+
+// when it is destructured and you take out key open and close
+for(const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
 
