@@ -27,3 +27,22 @@ const restaurant = {
     },
   },
 };
+
+// OBJECT LOOPING
+
+// property names are also called keys
+
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties)
+// gives you an array with keys
+
+// check length in object and keep adding the day
+let openStr = `We are open on ${properties.length} days: `;
+for (const day of properties) {
+  openStr += `${day}, `
+}
+console.log(openStr);
+
+
+
+
